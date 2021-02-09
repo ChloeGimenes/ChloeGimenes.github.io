@@ -2,18 +2,24 @@
 /* NAVBAR */////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     /* RECHERCHE APPEAR-DISAPPEAR *////////////////
-    $(document).ready(function(){     
+   
 
-        $("#b1").click(function(){
-            $("#search-appear").toggle();
-        });
-        
-        // $("#b1").click(function(){
-        //     $("#search-appear").hide();
-        // });
-    });
+    function ShowSearchBar() {
+        var x = document.getElementById("search-appear");
+        if (x.style.display === "none") {
+          x.style.display = "flex";
+        } else {
+          x.style.display = "none";
+        }
+      }
 
     function ClearFields() {
 
         document.getElementById("b2").value = "";
    }
+
+   $('.main-gallery').flickity({
+    // options
+    cellAlign: 'left',
+    contain: true
+  });

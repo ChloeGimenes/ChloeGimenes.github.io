@@ -22,6 +22,11 @@ html {
     margin: 0 0 8px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     background-color: #ffffff;
+    display: flex;
+    padding-left: 165px;
+    padding-right: 165px;
+    transition: 
+
 }
 
 .navbar {
@@ -32,6 +37,22 @@ html {
 
 }
 
+#b2 {
+width: 80%;
+border: none!important;
+margin-left: 22px;
+}
+
+#b2:focus {
+    outline:none!important;
+}
+
+#navbar-icon-search {
+
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .dropdown-menu  {
     display: flex;
 }
@@ -40,7 +61,23 @@ html {
     margin: auto;
     font-family: 'Rajdhani', sans-serif;
     color: #00aec7!important;
+    font-weight: 700;
 }
+
+
+#navbar-delete {
+    border: none!important;
+    background-color: #ffffff;
+}
+#navbar-delete:focus {
+    outline: none;
+}
+
+button-navbar-toggler {
+    outline: none!important;
+    border-color: none!important;
+}
+
 
 @media all and (max-width: 990px) {
 
@@ -53,6 +90,10 @@ html {
         margin: 0px;
         padding-left: 0px;
     }
+    #search-appear {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
 }
 
 @media all and (min-width: 1400px) {
@@ -62,3 +103,53 @@ html {
     margin-left: 165px;
 }
 }
+
+/* CAROUSEL ////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* external css: flickity.css */
+
+  .gallery {
+    background: #EEE;
+  }
+  
+  .gallery-cell {
+    width: 100%;
+    height: 300px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+  }
+  
+  /* cell number */
+  .gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+
+
+  /* HOME - MAIN /////////////////////////////////////////////////////////////////////////////////*/
+
+  .home-main {
+      margin-top: 80px;
+      margin-left: 165px;
+      margin-right: 165px;
+  }
+
+  /* FIRST BLOC IMAGES /////////////////////////////////////////////////////////////////////////*/
+  .home-infos {
+    display: flex;
+    justify-content: space-between;
+
+
+  }
+
+  .home-images-first-bloc {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 166px;
+  }

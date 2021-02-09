@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- BOOTSTRAP-->
@@ -16,6 +19,9 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
     <script src="spla.js"></script>
 
+    <!-- FLICKETY-->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
     <!-- Les trois lignes ci‑dessous sont un correctif pour que la sémantique
          HTML5 fonctionne correctement avec les anciennes versions de
          Internet Explorer-->
@@ -27,7 +33,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light ">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <svg width="102" height="79" viewBox="0 0 102 79" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,11 +75,9 @@
                   Vallée Sud Aménagement
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                
                       <li><a class="dropdown-item" href="#">Qui sommes-nous ?</a></li>
                       <li><a class="dropdown-item" href="#">La gouvernance</a></li>
                       <li><a class="dropdown-item" href="#">L'équipe</a></li>
-        
                 </ul>
               </li>
               <li class="nav-item">
@@ -85,10 +89,15 @@
                 <a class="nav-link" href="#">Actualités</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Médiathèque</a>
+                <div class="nav-div-selector">
+                  <a class="nav-link" href="#">Médiathèque
+                  </a>
+                </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contacts</a>
+                  <div class="nav-div-selector">
+                    <a class="nav-link" href="#">Contacts </a>
+                </div>
               </li>
             </ul>
             <form class="d-flex">
@@ -100,7 +109,7 @@
                     </svg>
                 </a>
 
-                <a id="b1" class="nav-link" href="#">
+                <a id="b1" onclick="ShowSearchBar()" class="nav-link" href="#">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z" fill="black"/>
                     </svg>
@@ -112,25 +121,67 @@
         </div>
       </nav>
 
-   <div id="search-appear">
-     <span>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z" fill="black"/>
+   <div style="display:none" id="search-appear">
+        <svg id="navbar-icon-search" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
+          <path fill="#494949" d="M24.041 22.156l5.71 5.71-1.886 1.886-5.71-5.71c-2.123 1.702-4.766 2.628-7.489 2.624-6.623 0-12-5.375-12-12 0-6.623 5.377-12 12-12 6.625 0 12 5.377 12 12 .004 2.723-.922 5.366-2.625 7.49zm-2.675-.99c1.693-1.74 2.638-4.072 2.634-6.5 0-5.157-4.177-9.333-9.334-9.333S5.333 9.51 5.333 14.666 9.51 24 14.666 24c2.428.004 4.76-.941 6.5-2.634l.2-.2z"/>
       </svg>
-       <input id="b2" type="text" placeholder="Que recherchez-vous ?">
-       <a >
-        <button type="button" onclick="ClearFields();">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
-            <path fill="#494949" d="M16 14.115l6.6-6.6L24.485 9.4l-6.6 6.6 6.6 6.6-1.885 1.885-6.6-6.6-6.6 6.6L7.515 22.6l6.6-6.6-6.6-6.6L9.4 7.515l6.6 6.6z"/>
-          </svg>
-        </button>
-
-         
-      </a>
-    
-      </span>
+        <input id="b2" type="text" placeholder="Que recherchez-vous ?">
+        
+          <button id="navbar-delete" type="button" onclick="ClearFields();">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
+              <path fill="#494949" d="M16 14.115l6.6-6.6L24.485 9.4l-6.6 6.6 6.6 6.6-1.885 1.885-6.6-6.6-6.6 6.6L7.515 22.6l6.6-6.6-6.6-6.6L9.4 7.515l6.6 6.6z"/>
+            </svg>
+          </button>
     </input>
   </div>
 
+
+
+      <!-- Flickity HTML init -->
+      <div class="main-gallery js-flickity"
+        data-flickity-options='{ "cellAlign": "left", "contain": true }'>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+      </div>
+<!--  BLOC INFOS -->
+<div class="home-main">
+     
+      <div class="home-infos">
+        <div>
+          <h3>Informations</h3>
+          <h2>Actualités</h2>
+        </div>
+
+        <div>
+          <input type="button" value="Voir toutes les actus" />
+        </div>
+      </div>
+
+
+<!--  BLOC IMAGES -->
+
+      <div class="home-images-first-bloc">
+        <div>
+          <img src="./assets/vallee-sud-amenagement/HOMEPAGE/HOMEPAGE_Images/image_fontaine_couleur.jpg" alt=""/>
+        </div>
+        <div>
+          <img src="./assets/vallee-sud-amenagement/HOMEPAGE/HOMEPAGE_Images/image_fontaine_couleur.jpg" alt=""/>
+        </div>
+        <div>
+          <img src="./assets/vallee-sud-amenagement/HOMEPAGE/HOMEPAGE_Images/image_fontaine_couleur.jpg" alt=""/>
+        </div>
+        <div>
+          <img src="./assets/vallee-sud-amenagement/HOMEPAGE/HOMEPAGE_Images/image_fontaine_couleur.jpg" alt=""/>
+        </div>
+      </div>
+
+<!--  PROJECTS BLOC -->
+
+
+
+</div>
 </body>
 </html>
