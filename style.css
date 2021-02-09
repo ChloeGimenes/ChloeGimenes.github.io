@@ -1,0 +1,64 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    }
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+    }
+
+
+/* NAVBAR /////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#search-appear {
+    height: 80px;
+    margin: 0 0 8px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+}
+
+.navbar {
+
+        width: auto;
+        box-shadow: 0 4px 8px 0 rgba(70, 70, 70, 0.1);
+        background-color: #ffffff!important;
+
+}
+
+.dropdown-menu  {
+    display: flex;
+}
+
+.nav-link {
+    margin: auto;
+    font-family: 'Rajdhani', sans-serif;
+    color: #00aec7!important;
+}
+
+@media all and (max-width: 990px) {
+
+    .d-flex {
+        flex-direction: column;
+    }
+
+    .d-flex > a.nav-link {
+        
+        margin: 0px;
+        padding-left: 0px;
+    }
+}
+
+@media all and (min-width: 1400px) {
+.navbar>.container-fluid {
+
+    margin-right: 165px;
+    margin-left: 165px;
+}
+}
