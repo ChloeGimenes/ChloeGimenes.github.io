@@ -14,6 +14,36 @@ html {
     box-sizing: content-box;
     }
 
+    footer > li > a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }
+
+ a {
+    color:inherit !important; 
+    text-decoration: inherit !important; 
+ }
+
+/* footer > a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none!important;
+    color:inherit !important; 
+    text-decoration: inherit !important; 
+} */
+
+ h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold!important;
+    font-size: 24px!important;
+    color: #000000
+ }
+
+ h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: bold!important;
+  font-size: 20px!important;
+  color: #000000
+}
 
 /* NAVBAR /////////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -178,6 +208,7 @@ padding-left: 0px;
 button-navbar-toggler {
     outline: none!important;
     border-color: none!important;
+
 }
 
 
@@ -203,6 +234,8 @@ button-navbar-toggler {
 
     margin-right: 165px;
     margin-left: 165px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 }
 
