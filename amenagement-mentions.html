@@ -76,7 +76,7 @@
                 <a class="navbar-icon-change nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Vallée Sud Aménagement
                   
-                    <svg class="navbar-icon-dropdown" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="navbar-icon-dropdown " width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12.0002 13.172L16.9502 8.22205L18.3642 9.63605L12.0002 16L5.63623 9.63605L7.05023 8.22205L12.0002 13.172Z" fill="#FEB62D"/>
                     </svg>
                     <!-- <svg class="navbar-icon-dropup" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -167,51 +167,58 @@
               </li>
             </ul>
           
-            <!-- RIGHT PART NAVBAR-->
+          <!-- RIGHT PART NAVBAR-->
             <div class="d-flex">
-              <a id="navbar-sendmail-button" class="nav-link" href="#">
-                  <svg  width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect id="navbar-button-mail" width="48" height="48" rx="4" fill="#00AEC7"/>
-                      <path d="M34 33.007C33.9982 33.2696 33.8931 33.521 33.7075 33.7068C33.5219 33.8926 33.2706 33.9979 33.008 34H14.992C14.7288 33.9997 14.4765 33.895 14.2905 33.7088C14.1045 33.5226 14 33.2702 14 33.007V32H32V20.3L24 27.5L14 18.5V17C14 16.7348 14.1054 16.4804 14.2929 16.2929C14.4804 16.1054 14.7348 16 15 16H33C33.2652 16 33.5196 16.1054 33.7071 16.2929C33.8946 16.4804 34 16.7348 34 17V33.007ZM16.434 18L24 24.81L31.566 18H16.434ZM12 28H20V30H12V28ZM12 23H17V25H12V23Z" fill="white"/>
-                  </svg>
-              </a>
-              <ul id="navbar-ul-style">
-                <li  style=" position: static !important" class="nav-item dropdown menu-large">
-                  <a style="padding-right: 0px;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path  id="navbar-button-search" d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z" fill="black"/>
-                    </svg>
+                <!-- LOGO MAIL -->
+                  <a id="navbar-sendmail-button" class="nav-link" href="#">
+                      <svg  width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect id="navbar-button-mail" width="48" height="48" rx="4" fill="#00AEC7"/>
+                          <path d="M34 33.007C33.9982 33.2696 33.8931 33.521 33.7075 33.7068C33.5219 33.8926 33.2706 33.9979 33.008 34H14.992C14.7288 33.9997 14.4765 33.895 14.2905 33.7088C14.1045 33.5226 14 33.2702 14 33.007V32H32V20.3L24 27.5L14 18.5V17C14 16.7348 14.1054 16.4804 14.2929 16.2929C14.4804 16.1054 14.7348 16 15 16H33C33.2652 16 33.5196 16.1054 33.7071 16.2929C33.8946 16.4804 34 16.7348 34 17V33.007ZM16.434 18L24 24.81L31.566 18H16.434ZM12 28H20V30H12V28ZM12 23H17V25H12V23Z" fill="white"/>
+                      </svg>
                   </a>
-                  <div id="Dropdown" style="width:100%" class="dropdown-menu megamenu nav-item " aria-labelledby="navbarDropdown">
-                      <div>
-                        <form style="display: flex; margin-left: 160px">
-                          <div style="margin-top: auto;margin-bottom: auto;" >
-                            <a class="dropdown-item" href="#">
-                              <svg id="navbar-icon-search" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
-                                <path fill="#494949" d="M24.041 22.156l5.71 5.71-1.886 1.886-5.71-5.71c-2.123 1.702-4.766 2.628-7.489 2.624-6.623 0-12-5.375-12-12 0-6.623 5.377-12 12-12 6.625 0 12 5.377 12 12 .004 2.723-.922 5.366-2.625 7.49zm-2.675-.99c1.693-1.74 2.638-4.072 2.634-6.5 0-5.157-4.177-9.333-9.334-9.333S5.333 9.51 5.333 14.666 9.51 24 14.666 24c2.428.004 4.76-.941 6.5-2.634l.2-.2z"/>
-                              </svg>
-                            </a>
-                          </div>
+                <!-- END LOGO MAIL -->
 
-                          <div id="navbar-search-input">
-                            <input id="b2" type="text" placeholder="Que recherchez-vous ?"></input>
-                          </div>
+                <!-- LOGO SEARCH -->
+                  <ul id="navbar-ul-style">
+                    <li  style=" position: static !important" class="nav-item dropdown menu-large">
+                      <a style="padding-right: 0px;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path  id="navbar-button-search" d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z" fill="black"/>
+                        </svg>
+                      </a>
+                <!-- END LOGO SEARCH -->
+                      <!-- SEARCH BAR -->
+                      <div id="Dropdown" style="width:100%" class="dropdown-menu megamenu nav-item " aria-labelledby="navbarDropdown">
+                          <div>
+                            <form style="display: flex; padding-left: 160px">
+                              <div style="margin-top: auto;margin-bottom: auto;" >
+                                <a class="dropdown-item" href="#">
+                                  <svg id="navbar-icon-search" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
+                                    <path fill="#494949" d="M24.041 22.156l5.71 5.71-1.886 1.886-5.71-5.71c-2.123 1.702-4.766 2.628-7.489 2.624-6.623 0-12-5.375-12-12 0-6.623 5.377-12 12-12 6.625 0 12 5.377 12 12 .004 2.723-.922 5.366-2.625 7.49zm-2.675-.99c1.693-1.74 2.638-4.072 2.634-6.5 0-5.157-4.177-9.333-9.334-9.333S5.333 9.51 5.333 14.666 9.51 24 14.666 24c2.428.004 4.76-.941 6.5-2.634l.2-.2z"/>
+                                  </svg>
+                                </a>
+                              </div>
 
-                          <div style="margin-top: auto;margin-bottom: auto">
-                            <button id="navbar-delete" onclick="ClearFields()">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
-                                <path fill="#494949" d="M16 14.115l6.6-6.6L24.485 9.4l-6.6 6.6 6.6 6.6-1.885 1.885-6.6-6.6-6.6 6.6L7.515 22.6l6.6-6.6-6.6-6.6L9.4 7.515l6.6 6.6z"/>
-                              </svg>
-                            </button>
-                        </div>
-                        </form>
+                              <div id="navbar-search-input">
+                                <input style="font-family: 'Rajdhani', sans-serif; font-size: 28px; color: #494949" id="b2" type="text" placeholder="Que recherchez-vous ?"></input>
+                              </div>
+
+                              <div style="margin-top: auto;margin-bottom: auto">
+                                <button style="padding: 18px" id="navbar-delete" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
+                                    <path fill="#494949" d="M16 14.115l6.6-6.6L24.485 9.4l-6.6 6.6 6.6 6.6-1.885 1.885-6.6-6.6-6.6 6.6L7.515 22.6l6.6-6.6-6.6-6.6L9.4 7.515l6.6 6.6z"/>
+                                  </svg>
+                                </button>
+                            </div>
+                            </form>
+                          </div>
                       </div>
-                  </div>
-                </li>
-              </ul>
+                      <!-- END SEARCH BAR -->
+                    </li>
+                  </ul>
+                <!-- END LOGO SEARCH -->
             </div>
             <!-- END RIGHT PART NAVBAR-->
-  
           </div>
         </div>
       </nav>
@@ -268,43 +275,43 @@
                 </span>
             </div>
 
-            <blockquote style="color:#494949">
-              <ul>
+            <blockquote style="color:#494949;">
+              <ul style="padding-left: 18px;margin-bottom: 32px;">
                 <li>Directeur de Publication: Nelly PINAUD, Directice</li>
                 <li>Hébergement du site: Aquaray</li>
                 <li>Réalisation: Obea</li>
               </ul>
-              <p>La loi française du 11 mars 1957 n’autorise, aux termes des alinéas 2 et 3 de l’article 41, 
+              <p style="margin-bottom: 32px">La loi française du 11 mars 1957 n’autorise, aux termes des alinéas 2 et 3 de l’article 41, 
                 d’une part, que les « copies ou reproductions strictement réservées à l’usage privé du copiste 
                 et non destinées à une utilisation collective » et, d’autre part, que les analyses et les 
                 courtes citations dans un but d’exemple et d’illustration (« toute représentation ou reproduction 
                 intégrale, ou partielle, faîtes sans le consentement de l’auteur ou de ses ayants droit ou ayants 
                 cause, est illicite » – alinéa 1er de l’article 40).
               </p>
-              <p>
+              <p style="margin-bottom: 32px">
                 Toute représentation ou reproduction abusive du site www.valleesud-amenagement.fr par quelque 
                 procédure que ce soit, constituerait donc une contrefaçon sanctionnée par les articles 425 et 
                 suivants du Code pénal.
               </p>
-              <p>
+              <p style="margin-bottom: 32px">
                 Les textes mis en ligne sur le site www.valleesud-amenagement.fr, sauf mentions particulières, 
                 sont la propriété intellectuelle et légale de son auteur. Sauf accord express, 
                 le site www.valleesud-amenagement.fr n’autorise pas la reproduction des articles produits 
                 et du texte qui les accompagne.
               </p>
-              <p>
+              <p style="margin-bottom: 32px">
                 Dans tous les cas, ces textes originaux ne peuvent être cités qu’à condition de prévenir l’auteur.
               </p>
-              <p>
+              <p style="margin-bottom: 32px">
                 Les liens présents sur ce site peuvent orienter l’utilisateur sur des sites extérieurs 
                 dont le contenu ne peut en aucune manière engager la responsabilité de la rédaction du 
                 site www.valleesud-amenagement.fr.
               </p>
-              <p>
+              <p style="margin-bottom: 32px">
                 Enfin, toutes les photos exposées sur le site www.spla-panorama.fr appartiennent à son 
                 auteur respectif, tout comme le contenu qui a été spécialement conçu pour le site www.valleesud-amenagement.fr.
               </p> 
-              <p>
+              <p style="margin-bottom: 32px">
                 La Vallée Sud aménagement peut, à tout moment, sans préavis, apporter des améliorations ou des 
                 changements aux services décrits sur ce site.
               </p>
@@ -315,7 +322,7 @@
     <!-- END MAIN -->
 
     <!-- COLON RIGHT -->
-    <aside class="colonne sidebar2" style="float: right; display: inline; margin-top: 183px;
+    <aside class="colonne sidebar2" style="float: left; display: inline; margin-top: 183px;
           width: 255px;
         
         margin-left: 30px;

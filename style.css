@@ -83,6 +83,34 @@ html {
   background-color: #feb62d!important;
 }
 
+/* */
+
+[data-bs-toggle="dropdown"][aria-expanded="true"] > .navbar-icon-dropdown
+{
+    -webkit-transform: rotate(180deg);
+    -moz-transform:    rotate(180deg);
+    -ms-transform:     rotate(180deg);
+    -o-transform:      rotate(180deg);
+    transform:         rotate(180deg);
+    transition: 0.3s;
+}
+
+[data-bs-toggle="dropdown"][aria-expanded="false"] > .navbar-icon-dropdown
+{
+    -webkit-transform: rotate(-0deg);
+    -moz-transform:    rotate(-0deg);
+    -ms-transform:     rotate(-0deg);
+    -o-transform:      rotate(-0deg);
+    transform:         rotate(-0deg);
+    transition: 0.3s;
+}
+
+
+
+
+
+
+
 /* MEGA DROPDOWN FULLSIZE */
 .dropdown-menu {
   border-radius:  0px!important;
@@ -164,7 +192,7 @@ height: 4rem;
     outline:none!important;
 }
 #navbar-search-input {
-  width: 70%;
+  width: 80%;
 }
 
 #navbar-icon-search {
